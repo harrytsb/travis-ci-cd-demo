@@ -1,0 +1,21 @@
+language: java
+
+# Changes what code runs remotely on the server
+script: mvn test -B
+
+# sets operating system of virtual machine
+os:
+  - linux
+  - osx
+
+jdk: oraclejdk8
+
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: heroku
+  api_key:
+    secure:
